@@ -28,23 +28,43 @@ RETURN string.
 */
 
 /*A method that takes an array of integers, and returns a new array with every other element from the original array, starting with the first element.
-Declare a function called everyOther that has one parameter.
-Filter(may be map) on the array parameter that iterates over a collection of integers and returns a new array that starts with the first element.
-Define the element and index parameter. 
-Use the modulo sign and filter the element to be divisible by an even number(2) to only return every other element in the new array.
-Explicity return the method and the value in the callback function.
+Input: an array of integer numbers called numbers
+Output: an array consisting of every even-indexed from the input array
+
+declare `evenIndexElements` and initialize to an empty array
+
+begin iteration over input array (loop iterator variable: `idx`)
+  declare `currentNumber` and initialize to current element(numbers[idx])
+  push `currentNumber` onto `evenIndexElements`
+  increment current loop iterator `idx` by 2
+end iteration
+
+return `evenIndexElements`
 
 START
-DECLARE everyOther()
-WHILE index is % 2 with no reminder
+#Given an array of integers called `numbers`
 
+SET evenIndexElements = []
 
-function everyOther(array) {
-return array.filter((element, index) => {
-  return index % 2 === 0;
-  });
+WHILE iterator <= length of `numbers`
+  SET currentNumber = numbers[iterator]
+  push currentNumber onto end of evenIndexElements array
+  iterator = iterator + 2
+
+Return evenIndexElements
+END
+
+function everyOther(numbers) {
+  const evenIndexElements = [];
+
+  for (let idx = 0; idx < numbers.length; idx += 2) {
+    evenElements.push(numbers[idx]);
+  }
+
+  return evenIndexElements;
 }
 
+console.log(everyOther([1,4,7,2,5])); // => [1,7,5]
 
 
 /*a function that determines the index of the 3rd occurrence of a given character in a string. For instance, if the given character is 'x' and the string is 'axbxcdxex', the function should return 6 (the index of the 3rd 'x'). If the given character does not occur at least 3 times, return null.
@@ -65,19 +85,209 @@ PRINT NULL
 */
 
 /* a function that takes two arrays of numbers and returns the result of merging the arrays. The elements of the first array should become the elements at the even indexes of the returned array, while the elements of the second array should become the elements at the odd indexes.
+Casual:
 
-Given two array collections of integers. 
-Declare the function with two parameters called arr1 & arr2.
-Use an iterating method to iterate over the elements of the first array's elements 
-Determine how to push arr1 into a new array at the even indexes
-Determine how to push arr2 into a new array at the odd indexes
+Input: two array collections of numbers called `arr1` and `arr2`
+Output: a single merged array from the values of the two input arrays: arr1 being at the even indexes and arr2 at the odd indexes.
 
-Use the concat() method to merge both of the arrays and save the result to a new array called newArray
-Return the newArray array.
+declare `mergedArray` and initialize it to an empty array
+declare `evenIndexes` and initialize it to 0
+
+iterate over arr1 with the loop iterator variable being: `idx`
+  declare `currNum` and initialize to it to the current element of `arr1`
+  assign `currNum` onto `mergedArray` at `evenIndex`
+  increment `evenIndex` by 2
+end iteration
+
+iterate over arr2 with loop iterator variable being `idx`
+ declare `currNum` and initialize to current element of `arr2`
+ assign `currNum` onto `mergedArray` at index `oddIndex
+end iteration
+
+return mergedArray
+
+Formal:
+
+#Given two array collections of numbers
+
+SET `mergedArray` = []
+SET `evenIndexes` = 0
+SET  `oddIndexes` = 1
+
+WHILE `idx` < arr1.length
+  SET `currNum` = arr1[idx]
+  `currNum` = mergedArray[evenIndexes]
+  `evenIndexes` = `evenIndexes` + 2
+
+WHILE `idx` < arr2.length
+  SET `currNum` = arr2[idx]
+  currNum = mergedArray[oddIndexes]
+  oddIndexes = oddIndexes + 2
+
+PRINT mergedArray
+END
+
+  
 
 
+
+
+
+function merge( , ) {
+
+}
 merge([1, 2, 3], [4, 5, 6]); // => [1, 4, 2, 5, 3, 6]
 */
+
+// function merge(arr1, arr2) {
+//   const mergedArray = [];
+//   let evenIndex = 0;
+//   let oddIndex = 1;
+
+//   for (let idx = 0; idx < arr1.length; idx ++) {
+//     for (let secondIdx = 0; idx < arr2.length; secondIdx ++) {
+//       let currIdx = arr1[idx][secondIdx]
+//     }
+    
+//     const currNum = arr1[idx];
+//     mergedArray[evenIndex] = currNum;
+//     evenIndex += 2;
+//   }
+
+//   for (let idx = 0; idx < arr2.length; idx ++) {
+//     const currNum = arr2[idx];
+//     mergedArray[oddIndex] = currNum;
+//     oddIndex += 2;
+//   }
+
+// return mergedArray;
+
+// }
+
+
+// console.log(merge([1, 2, 3], [4, 5, 6])); // => [1, 4, 2, 5, 3, 6]
+
+
+
+
+
+// Formal:
+
+// #Given two array collections of numbers
+
+// SET `mergedArray` = []
+// SET `evenIndexes` = 0
+// SET  `oddIndexes` = 1
+
+// WHILE `idx` < arr1.length
+//   SET `currNum` = arr1[idx]
+//   `currNum` = mergedArray[evenIndexes]
+//   `evenIndexes` = `evenIndexes` + 2
+
+// WHILE `idx` < arr2.length
+//   SET `currNum` = arr2[idx]
+//   currNum = mergedArray[oddIndexes]
+//   oddIndexes = oddIndexes + 2
+
+// PRINT mergedArray
+// END
+
+
+// function merge(arr1, arr2) {
+//   const mergedArray = [];
+//   let evenIndex = 0;
+//   let oddIndex = 1;
+  
+// arr1.forEach((element, idx, array) => {
+//     secondIdx = arr2[oddIndex];
+//   if (array[oddIndex]) {
+//     const currNum = arr2[idx];
+//     mergedArray[evenIndex] = currNum;
+//     evenIndex += 2;
+//   } else if (array[idx] % 2 === 1) {
+//     const currNum = arr2[idx];
+//     mergedArray[oddIndex] = currNum;
+//     oddIndex += 2;
+//   }
+// });
+
+
+// return mergedArray;
+
+// }
+
+// console.log(merge([1, 2, 3], [4, 5, 6])); // => [1, 4, 2, 5, 3, 6]
+// Input: two array collections of numbers called `arr1` and `arr2`
+// Output: a single merged array from the values of the two input arrays: arr1 being at the even indexes and arr2 at the odd indexes.
+//
+// declare `mergedArray` and initialize it to an empty array
+// declare `evenIndexes` and initialize it to 0
+// declare 'oddIndexes and initialize it to 1;
+// 
+// iterate over arr1 and arr2 with the loop iterator variable being: `idx`
+//  have the stopping condition be twice the length of both input arrays
+//  if the current idx is in arr1
+//    declare `currNum` and initialize to it to the current element of `arr1`
+//    assign `currNum` onto `mergedArray` at `evenIndex`
+//    increment `evenIndex` by 2
+//    
+
+//  if the current idx is in arr2
+//    declare `currNum` and initialize to current element of `arr2`
+//    assign `currNum` onto `mergedArray` at index `oddIndex
+//    increment `oddIndex` by 2
+//    
+//  end iteration
+
+
+
+function merge(arr1, arr2) {
+  const mergedArray = [];
+  let evenIndex = 0;
+  let oddIndex = 1;
+  
+  for (let idx = 0; idx < arr1.length * 2; idx ++) {
+    
+    if (arr1[idx]) {
+      const currNum = arr1[idx];
+      mergedArray[evenIndex] = currNum;
+      evenIndex += 2;
+    }
+    
+    if (arr2[idx]) {
+      const currNum = arr2[idx];
+      mergedArray[oddIndex] = currNum;
+      oddIndex += 2;
+    }
+
+
+
+  }
+  return mergedArray;
+};
+
+console.log(merge([1, 2, 3], [4, 5, 6])); // => [1, 4, 2, 5, 3, 6])
+
+
+//
+//SET mergedArray = []
+//SET evenIndex = 0
+//SET oddIndex = 1
+//
+//WHILE idx < arr1.length * 2
+//INCREMENT idx += 1
+//
+//IF arr1[idx] === true
+//SET currNum = arr1[idx]
+//mergedArray[evenIndex] = currNum 
+//evenIndex += 2
+//
+//IF arr2[idx] === true
+//SET currNum = arr2[idx]
+//mergedArray[oddIndex] = currNum
+//oddIndex += 2
+//
+//RETURN mergedArray
 
 
 
