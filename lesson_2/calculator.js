@@ -1,14 +1,7 @@
-//1. Ask the user for two numbers. 2. Ask user for type of operation to peform: add, sub, mult, div. 3. Perform calculation and display result.
-//Ask user for the first num. 
-//Ask user for the second number. 
-//Ask user for an operation to perform. 
-//Perform operator on two numbers
-//Print results
-
 const readline = require('readline-sync');
 function prompt(msg) {
-  console.log(`=> ${msg}`)
-};
+  console.log(`=> ${msg}`);
+}
 
 function invalidNumber(num) {
   return num.trimStart() === '' || Number.isNaN(Number(num));
