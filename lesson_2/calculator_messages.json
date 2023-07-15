@@ -1,0 +1,26 @@
+{
+
+"en" : {
+  "welcome" : "Welcome to Calculator Mania!",
+  "firstNum" : "What is the first number, patron.",
+  "invalidNum" : "Miss ma'am. I need you to input a valid number.",
+  "secondNum" : "What is the second number?",
+  "secondInvalidNum" : "Miss ma'am. I need you to input a valid number.",
+  "operation" : "What operation would you like me to perform?\n1) Add 2) Subtract 3) Multply 4) Divide",
+  "pickNum" : "Pick a number...1, 2, 3, or 4 are the only exceptable answers. *sigh*",
+  "contQuestion" : "Would you like to perform an ADDITIONAL operation? Get it? *dry machine laugh* Check (y/n). *machine groans to a stop, waiting for a response*"
+},
+  "es" : {
+    "welcome" : "¡Bienvenido a Calculator Mania!",
+    "firstNum" : "¿Cuál es el primer número, mecenas?",
+    "invalidNum" : "Señorita señora. Necesito que ingrese un número válido.",
+    "secondNum" : "¿Cuál es el segundo número?",
+    "secondInvalidNum" : "Señorita señora. Necesito que ingrese un número válido.",
+    "operation" : "¿Qué operación quieres que realice?\n1) Sumar 2) Restar 3) Multiplicar 4) Dividir",
+    "pickNum" : "Elige un número... 1, 2, 3 o 4 son las únicas respuestas aceptables. *suspiro*",
+    "contQuestion" : "¿Le gustaría realizar una operación ADICIONAL? ¿Lo consigue? *risa seca de la máquina* Marcar (s/n). *la máquina gime hasta detenerse, esperando una respuesta*"
+  }
+
+
+
+}

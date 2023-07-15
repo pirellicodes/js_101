@@ -1,6 +1,17 @@
+//Ask the user if they want to do another calculation
+//Extract messages in program to a configuration problem
+//Internationalize the messages in your calculator
+const MESSAGES = require('./calculator_messages.json');
+const LANGUAGE = 'es';
+
+function messages(message, lang = 'en') {
+  return MESSAGES[lang][message];
+}
+
 const readline = require('readline-sync');
-function prompt(msg) {
-  console.log(`=> ${msg}`);
+function prompt(key) {
+  let message = messages(key, LANGUAGE);
+  console.log(`=> ${message}`);
 }
 
 function invalidNumber(num) {
@@ -8,28 +19,31 @@ function invalidNumber(num) {
 }
 
 
-prompt('Welcome to Calculator Mania!');
 
-prompt('What is the first number, patron.');
+prompt('welcome');
+
+
+while (true) {
+prompt('firstNum');
 let number1 = readline.question();
 
 while (invalidNumber(number1)) {
-  prompt("Miss ma'am. I need you to input a valid number.");
+  prompt('invalidNum');
   number1 = readline.question();
 }
 
-prompt('What is the second number?');
+prompt('secondNum');
 let number2 = readline.question();
 
 while (invalidNumber(number2)) {
-  prompt("Miss ma'am. I need you to input a valid number.");
+  prompt('Miss ma\'am. I need you to input a valid number.');
   number2 = readline.question();
 }
 
-prompt('What operation would you like me to perform?\n1) Add 2) Subtract 3) Multply 4) Divide');
+prompt('operation');
 let operation = readline.question();
 while (!['1', '2', '3', '4'].includes(operation)) {
-  prompt("Pick a number...1, 2, 3, or 4 are the only exceptable answers. *sigh*");
+  prompt('pickNum');
   operation = readline.question();
 }
 
@@ -52,3 +66,18 @@ switch (operation) {
 
 
 prompt(`The result is: ${output}`);
+
+prompt('contQuestion');
+let answer = readline.question();
+
+if (answer[0].toLowerCase() !== 'y') break;
+
+};
+
+
+
+
+  
+
+
+
