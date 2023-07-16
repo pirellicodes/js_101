@@ -2,7 +2,7 @@
 //Extract messages in program to a configuration problem
 //Internationalize the messages in your calculator
 const MESSAGES = require('./calculator_messages.json');
-const LANGUAGE = 'es';
+const LANGUAGE = 'en';
 
 function messages(message, lang = 'en') {
   return MESSAGES[lang][message];
