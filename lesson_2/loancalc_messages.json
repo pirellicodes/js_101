@@ -1,0 +1,15 @@
+{
+  "intro" : "How-dy! Thank you for stop-ping in, part-a-ner. I am, SHADY SLIM'S LOAN CALCULATOR 3000 Robot. A pleasure, I'm shore. I'll be needin' some details before we get a startin'. *old machine beep boops*",
+  "loanAmount" : "Wot' is yer delicious indebted (loan) amount, hotrod?",
+  "tooLowAmount" : "Sorry sport. Yer' loans gotta be more than 1000 dolla's fo' me ta' work witcha. *snobby machine voicebox clickery*\n-> Try again.", 
+  "invalidResp" : "Yor gettin' too crazy with the keys. I'm gon' need ya' to give me a valid number. Good day.",
+  "apr" : "Wot' is yer Annual Percentage Rate? If you's fancy it, when 0.05 is entered I take that as 5%, mmkay?",
+  "pleaseEnterValidForm" : "Sonny, already told ya' I only accept fo-mats(formats) like 0.05",
+  "secondInvalidResp" : "This cowboy can not compute that. I need you to input a valid number.",
+  "loanTerm" : "Wheeew-ie! You shore' you can afford that, bubba? Or you'ms secretly one of thems' highrollers?\n-> Anywho, wot' is yer loan term in m-o-n-t-h-s if ya fancy, part-a-ner?",
+  "tryAgain" : "Awlrighty then part-a-ner. *machine sputters and grunts*\n-> E-e-e-enter yer numba-a-a-a' a-againnn.",
+  "invaldLoanTermMssg" : "C'mon now. I'm gon' give ya' til' the count of 5 to gimme' a VALID loan duration. Litrally, luv, I spelled it out for you. Part-a-ner. Get right! *electric mad bull noises* ",
+  "contQuestion" : "Wuld ya' like me ta' fix you up reeeaaal good again for yer loan needs, with me fancy cal-cu-lation brain? Check (y/n).",
+  "badContAnswer" : "You sure you should be applin' fer a loan if you's can't even type a y/yes or n/no? Try again and give a response I can dance with, meatpie.",
+  "goodbyeMssg" : "Well, sure am glad to have been of service. You mind puttin' some oil on my c-calabrator? Oh shoot. Forget we're ova' the intrawebs.\n-> GOODBYE NOW. *old machine groans to a halt* "
+}
